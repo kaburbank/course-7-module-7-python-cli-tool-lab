@@ -4,7 +4,14 @@ import argparse
 from models import Task, User
 
 # Global dictionary to store users and their tasks
+
 users = {}
+
+# Hardcoded user and task for testing complete-task
+alice = User("Alice")
+unit_test_task = Task("Write unit tests")
+alice.add_task(unit_test_task)
+users["Alice"] = alice
 
 # TODO: Implement function to add a task for a user
 def add_task(args):
